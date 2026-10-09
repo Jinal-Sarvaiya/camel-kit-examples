@@ -2,9 +2,11 @@
 
 This example demonstrates how to use Camel-Kit's workflow to design and implement an order ingestion pipeline.
 
+This is a walkthrough; the application files are generated during the workflow.
+
 ## Getting Started
 
-Initialize a new Camel-Kit project using the CLI:
+From a directory outside this checkout, initialize a new Camel-Kit project using the CLI:
 ```bash
 # Choose your AI assistant
 camel-kit init my-integration --ai antigravity     # Google Antigravity
@@ -23,6 +25,7 @@ camel-kit init my-integration --ai claude -c team-config.properties
 ```
 
 This creates the project structure with AI agent configuration and skills.
+Open your AI assistant in the generated `my-integration` directory for the workflow below.
 
 ## Scenario
 
@@ -73,7 +76,7 @@ The assistant implements, validates, tests, and verifies all flows.
 
 ## Infrastructure
 
-Use the provided `docker-compose.yaml` to start Kafka and PostgreSQL:
+Once the workflow generates `docker-compose.yaml`, run this in the generated project to start Kafka and PostgreSQL:
 ```bash
 docker compose up -d
 ```
@@ -116,6 +119,6 @@ order-processing/
 
 ## Documentation
 
-- [User Guide](../../docs/user-guide.md)
-- [Command Reference](../../docs/commands.md)
-- [Constitution](../../docs/constitution.md)
+- [User Guide](https://github.com/luigidemasi/camel-kit/blob/main/docs/user-guide.md)
+- [Command Reference](https://github.com/luigidemasi/camel-kit/blob/main/docs/commands.md)
+- [Constitution](https://github.com/luigidemasi/camel-kit/blob/main/docs/constitution.md)

@@ -29,19 +29,22 @@ This example demonstrates a typical BizTalk order processing flow:
 
 ## How to Run Migration
 
-From the camel-kit repository root:
+From the `camel-kit-examples` repository root, create a separate migration project:
 
 ```bash
 # Initialize migration project with BizTalk source platform
-camel-kit init biztalk-order-processing --ai claude --source-platform biztalk
-
-# Navigate to the initialized project
-cd biztalk-order-processing
+camel-kit init ../biztalk-order-processing-migration --ai claude --source-platform biztalk
 
 # Copy this example's BizTalk files into the project
-cp ../examples/biztalk-order-processing/*.{odx,btm,btp,xml,xsd} .
+cp biztalk-order-processing/*.{odx,btm,btp,xml,xsd} ../biztalk-order-processing-migration/
 
-# Start the migration skill
+# Navigate to the initialized project
+cd ../biztalk-order-processing-migration
+```
+
+Open your AI assistant in that directory and start the migration skill:
+
+```text
 /camel-migrate
 ```
 
@@ -76,6 +79,6 @@ This example covers common BizTalk patterns:
 
 ## References
 
-- [Camel Kit BizTalk Migration Guide](../../docs/architecture.md#biztalk-parser-architecture)
-- [BizTalk Component Mapping Reference](../../camel-kit-core/src/main/resources/skills/camel-migrate/guides/biztalk-component-mapping.md)
+- [Camel Kit BizTalk Migration Guide](https://github.com/luigidemasi/camel-kit/blob/main/docs/architecture.md#biztalk-parser-architecture)
+- [BizTalk Component Mapping Reference](https://github.com/luigidemasi/camel-kit/blob/main/camel-kit-core/src/main/resources/skills/camel-migrate/guides/biztalk-component-mapping.md)
 - [Apache Camel Documentation](https://camel.apache.org/)
